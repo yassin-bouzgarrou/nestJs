@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgress
+      POSTGRES_USER: 123
+      POSTGRES_DB: nest
+  nest:
+    image: postgres:16-alpine
+    ports:
+      - localhost:3000
+    
+
